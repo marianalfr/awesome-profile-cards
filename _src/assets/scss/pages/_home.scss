@@ -37,11 +37,15 @@
         flex-direction: row;
         justify-content: space-between;
         width:268px;
+        border: solid 1.6px $color-main;
+        border-radius: 4px;
+        
 
         &-icon {
             display: flex;
             flex-direction: column;
             align-items: center;
+        
         }
     }
     &__text-icons {
