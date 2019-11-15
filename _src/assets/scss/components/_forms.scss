@@ -1,0 +1,40 @@
+.forms{
+    background-image: linear-gradient(#f5f5f5, #ffff);
+    .section-wrapper{
+        padding: 30px 20px;
+        .form-top{
+            h2{
+              font-size: rem(18);  
+              text-transform: uppercase;
+              i{
+                color:$color-main;
+              }
+            }
+        }
+        .design{
+            .form-bottom{
+                p{
+                    font-size: rem(14);
+                }
+                .palette1 label{
+                    div{
+                        width: 30px;
+                        height: 25px;
+                    }
+                    
+                    .color-1{
+                        background-color: $color-palette1c1;
+                    }
+                    .color-2{
+                        background-color: $color-palette1c2;
+                    }
+                    .color-3{
+                        background-color: $color-palette1c3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
