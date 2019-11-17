@@ -1,3 +1,15 @@
+
+.main__card{
+    background-image: linear-gradient(#f5f5f5, #ffff);
+
+    @include media($tablet){
+        padding: 20px 40px;
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        grid-template-areas: 'forms preview';
+    }
+}
+
 /* C A R D   P R E V I E W * * * * * * * * * */
 
 .preview{
@@ -7,6 +19,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media($tablet){
+        grid-area: preview;
+        height: 100%;
+        min-height: calc(100vh - 151px);
+        border-radius: 6px;
+    }
 
     &__wrapper{
         width: 240px;
