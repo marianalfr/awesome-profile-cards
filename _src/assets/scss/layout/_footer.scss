@@ -11,26 +11,23 @@
     height: 110px;
     border-top: solid 1px $color-background;
     //en zeplin da la sensación de que el footer tiene la raya de arriba pero con ese color no se ve//
+    @include media($tablet){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding: 20px 40px;
+    }
+
+    &__copyright{
+        margin: 0px auto 20px;
+
+        @include media($tablet){
+            margin: 0px;
+        }
+    }
+
     &__logo-image {
-        width: 103px;
         height: 40px;
     }
-}
-
-
-@media all and (min-width:768px) {
-    .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-        &__copyright {
-            margin-left: 40px;
-        }
-        &__logo {
-            margin-right: 40px;
-        }
-
-    }
-
 }
