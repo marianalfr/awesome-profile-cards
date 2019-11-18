@@ -3,16 +3,16 @@
         <button class="btn-reset"><i class="far fa-trash-alt"></i> reset</button>
         <div class="card">
             <div class="card__id">
-                <h3 class="card__id--name">Nombre Apellido</h3>
-                <p class="card__id--role">Front-end developer</p>
+                <h3 id="cardName" class="card__id--name">Nombre Apellido</h3>
+                <p id="cardJob" class="card__id--role">Front-end developer</p>
             </div>
             <div class="card__photo"></div>
             <div class="card__contacts">
                 <ul>
-                    <li class="contact-icon"><i class="fas fa-mobile-alt"></i></li>
-                    <li class="contact-icon"><i class="far fa-envelope"></i></li>
-                    <li class="contact-icon"><i class="fab fa-linkedin-in"></i></li>
-                    <li class="contact-icon"><i class="fab fa-github-alt"></i></li>
+                    <a id = "linkTelf" href=""><li id="cardTelf" class="contact-icon hidden"><i class="fas fa-mobile-alt"></i></li></a>
+                    <a id = "linkEmail" href=""><li id="cardEmail" class="contact-icon hidden"><i class="far fa-envelope"></i></li></a>
+                    <a id = "linkLinkedin" href="" target="_blank"><li id="cardLinkedin" class="contact-icon hidden"><i class="fab fa-linkedin-in"></i></li></a>
+                    <a id = "linkGithub" href="" target="_blank"><li id="cardGithub" class="contact-icon hidden"><i class="fab fa-github-alt"></i></li></a>
                 </ul>
             </div>
         </div>
