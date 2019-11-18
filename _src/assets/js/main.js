@@ -23,7 +23,7 @@ inputJob.addEventListener('keyup', printJob);
 
 
 /////////////////////////////////////////////////////////
-// Add text from form inputs to card
+// Add links to card
 
 let inputEmail = document.querySelector('#email');
 let inputTelf = document.querySelector('#telf');
