@@ -45,7 +45,6 @@
                 height: 42px;
                 padding: 0px 20px;
                 margin-bottom: 10px;
-                border-left: solid 5px $color-secondary;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -53,7 +52,6 @@
                 &--name{
                     font-size: rem(18);
                     margin: 0px;
-                    color: $color-palette1c1;
                 }
 
                 &--role{
@@ -81,8 +79,6 @@
                     height: 32px;
                     margin-right: 10px;
                     border-radius: 50%;
-                    border: solid 2px $color-palette1c3;
-                    color: $color-palette1c1;
                     display: flex;
                     justify-content: center;
                     align-items: center;
