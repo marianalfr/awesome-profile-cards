@@ -1,100 +1,102 @@
 <section class="forms">
     <div class="section-wrapper">
-        <!--DESIGN-------------------------------------------------->
-        <section class="forms__section design">
-            <input class="arrow-checkbox" type="checkbox" checked>
-            <div class="form-arrow arrow-down"><i class="fas fa-chevron-down"></i></div>
-            <div class="form-top">
-                <h2><i class="far fa-object-ungroup"></i> Diseña</h2>
-            </div>
-            <div class="form-bottom">
-                <p>Colores</p>
-                <ul>
-                    <li class="select-palette palette-1">
-                        <input id="palette1" type="radio" name="palettes" checked>
-                        <label class="palette" for="palette1">
-                            <div class="palette__color color-1"></div>
-                            <div class="palette__color color-2"></div>
-                            <div class="palette__color color-3"></div>
-                        </label>
-                    </li>
-                    <li class="select-palette palette-2">
-                        <input id="palette2" type="radio" name="palettes">
-                        <label class="palette" for="palette2">
-                            <div class="palette__color color-1"></div>
-                            <div class="palette__color color-2"></div>
-                            <div class="palette__color color-3"></div>
-                        </label>
-                    </li>
-                    <li class="select-palette palette-3">
-                        <input id="palette3" type="radio" name="palettes">
-                        <label class="palette" for="palette3">
-                            <div class="palette__color color-1"></div>
-                            <div class="palette__color color-2"></div>
-                            <div class="palette__color color-3"></div>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!--FILL----------------------------------------------------->
-        <section class="forms__section fill">
-                <input class="arrow-checkbox" type="checkbox">
+        <form action="" method="POST" id="card__form">
+            <!--DESIGN-------------------------------------------------->
+            <section class="forms__section design">
+                <input class="arrow-checkbox" type="checkbox" checked>
                 <div class="form-arrow arrow-down"><i class="fas fa-chevron-down"></i></div>
-            <div class="form-top">
-                <h2><i class="far fa-keyboard"></i></i> Rellena</h2>
-            </div>
-            <div class="form-bottom">
-                <ul>
-                    <li class="FullName">
-                        <label for="FullName">Nombre completo</label>
-                        <input placeholder="Ej: Sally Hill" id="fullName" type="text" name="FullName">
-                    </li>
-                    <li class="job">
-                        <label for="job">Puesto</label>
-                        <input placeholder="Ej: Front-End unicorn" id="job" type="text" name="job"><label for="job"></label>
-                    </li>
-                    <li class="profile-picture">
-                        <label> Imagen de perfil</label>
-                        <div class="profile-picture__upload">
-                            <button class="btn-upload">Añadir imagen</button>
-                            <div class="thumbnail"></div>
-                        </div>
-                    </li>
-                    <li class="email">
-                        <label for="email">Email</label>
-                        <input placeholder="Ej: sally-hill@gmail.com" id="email" type="email" name="email">
-                    </li>
-                    <li class="telf">
-                        <label for="telf">Teléfono</label>
-                        <input placeholder="Ej: 555-55-55-55" id="telf" type="tel" name="telf">
-                    </li>
-                    <li class="linkedin">
-                        <label for="linkedin">Linkedin</label>
-                        <input placeholder="linkedin.com/in/sally.hill" id="linkedin" type="text" name="linkedin">
-                    </li>
-                    <li class="github">
-                        <label for="github">Github</label>
-                        <input placeholder="@sally-hill"  id="github" type="text" name="github">
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!--SHARE---------------------------------------------------->
-        <section class="forms__section share">
+                <div class="form-top">
+                    <h2><i class="far fa-object-ungroup"></i> Diseña</h2>
+                </div>
+                <div class="form-bottom">
+                    <p>Colores</p>
+                    <ul>
+                        <li class="select-palette palette-1">
+                            <input id="palette1" type="radio" name="palettes" checked>
+                            <label class="palette" for="palette1">
+                                <div class="palette__color color-1"></div>
+                                <div class="palette__color color-2"></div>
+                                <div class="palette__color color-3"></div>
+                            </label>
+                        </li>
+                        <li class="select-palette palette-2">
+                            <input id="palette2" type="radio" name="palettes">
+                            <label class="palette" for="palette2">
+                                <div class="palette__color color-1"></div>
+                                <div class="palette__color color-2"></div>
+                                <div class="palette__color color-3"></div>
+                            </label>
+                        </li>
+                        <li class="select-palette palette-3">
+                            <input id="palette3" type="radio" name="palettes">
+                            <label class="palette" for="palette3">
+                                <div class="palette__color color-1"></div>
+                                <div class="palette__color color-2"></div>
+                                <div class="palette__color color-3"></div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--FILL----------------------------------------------------->
+            <section class="forms__section fill">
+                    <input class="arrow-checkbox" type="checkbox">
+                    <div class="form-arrow arrow-down"><i class="fas fa-chevron-down"></i></div>
+                <div class="form-top">
+                    <h2><i class="far fa-keyboard"></i></i> Rellena</h2>
+                </div>
+                <div class="form-bottom">
+                    <ul>
+                        <li class="FullName">
+                            <label for="FullName">Nombre completos<span>*</span></label>
+                            <input placeholder="Ej: Sally Hill" id="fullName" type="text" name="FullName" required>
+                        </li>
+                        <li class="job">
+                            <label for="job">Puesto<span>*</span></label>
+                            <input placeholder="Ej: Front-End unicorn" id="job" type="text" name="job" required><label for="job"></label>
+                        </li>
+                        <li class="profile-picture">
+                            <label> Imagen de perfil</label>
+                            <div class="profile-picture__upload">
+                                <button class="btn-upload">Añadir imagen</button>
+                                <div class="thumbnail"></div>
+                            </div>
+                        </li>
+                        <li class="email">
+                            <label for="email">Email<span>*</span></label>
+                            <input placeholder="Ej: sally-hill@gmail.com" id="email" type="email" name="email" required>
+                        </li>
+                        <li class="telf">
+                            <label for="telf">Teléfono<span>*</span></label>
+                            <input placeholder="Ej: 555-55-55-55" id="telf" type="tel" name="telf" required>
+                        </li>
+                        <li class="linkedin">
+                            <label for="linkedin">Linkedin</label>
+                            <input placeholder="linkedin.com/in/sally.hill" id="linkedin" type="text" name="linkedin">
+                        </li>
+                        <li class="github">
+                            <label for="github">Github</label>
+                            <input placeholder="@sally-hill"  id="github" type="text" name="github">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--SHARE---------------------------------------------------->
+            <section class="forms__section share">
                 <input class="arrow-checkbox" type="checkbox">
                 <div class="form-arrow arrow-down"><i class="fas fa-chevron-down"></i></div>
                 <div class="form-top">
                     <h2><i class="fas fa-share-alt"></i></i> Comparte</h2>
                 </div> 
                 <div class="form-bottom">
-                    <button class="btn-create"><i class="far fa-address-card"></i> Crear tarjeta</button>
+                    <button class="btn-create" id="btn-create"><i class="far fa-address-card"></i> Crear tarjeta</button>
                     <div class="card__share hidden">
                         <p>La tarjeta ha sido creada:</p>
                         <p class="card__link">card link</p>
                         <button class="btn-twitter"><i class="fab fa-twitter"></i> Compartir en twitter</button>
                     </div>
                 </div>  
-        </section>
+            </section>
+        </form>
     </div>
 </section>

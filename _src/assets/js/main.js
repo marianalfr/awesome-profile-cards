@@ -117,3 +117,23 @@ palette1.addEventListener ('change',previewPalette1);
 palette2.addEventListener ('change',previewPalette2);
 palette3.addEventListener ('change',previewPalette3);
 
+/////////////////////////////////////////////////////////
+// form validation
+
+/*const cardForm = document.querySelector('#card__form');
+const buttonCreate = document.querySelector('#btn-create');
+const input = cardForm.querySelector('input');
+
+function inactiveButton (){
+    if (cardForm.checkValidity === false){
+        buttonCreate.classList.add('btn-create-inactive');
+    }
+}
+
+.addEventListener('')*/
+
+/////////////////////////////////////////////////////////
+// 
+
+
+

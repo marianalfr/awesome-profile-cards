@@ -33,6 +33,10 @@
             padding-top: 28px;
             transition:max-height 0.5s; 
             overflow:hidden;
+
+            label span{
+                color: $color-main;
+            }
         }
 
         .form-arrow{

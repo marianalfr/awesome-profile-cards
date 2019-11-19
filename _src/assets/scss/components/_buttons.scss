@@ -32,6 +32,10 @@
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.164);
 }
 
+.btn-create-inactive{
+    background-color: $color-textlight;
+}
+
 .btn-twitter{
     background: $color-twitter;
     border-radius: 3px;
