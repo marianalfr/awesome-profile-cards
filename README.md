@@ -1,7 +1,9 @@
 
-# Starter Kit
-Esta es una modificación del [Starter Kit de Adalab](https://github.com/Adalab/Adalab-web-starter-kit) en node/gulp para utilizarlo como base de nuestros ejercicios y proyectos.
-Incluye SCSS, un sistema de plantillas HTMl y un web server.
+# Awesome Profile Cards
+Esta aplicación sirve para crear tarjetas de visita virtuales y compartirlas con tus contactos.
+A través del link  "Comenzar" de la landing page de la aplicación se accede a la página de personalización. En ella podremos elegir entre las diferentes opciones de diseño de la tarjeta y rellenar nuestros datos personales y de contacto.
+A medida que vamos construyendo nuestra tarjeta se irán mostrando los cambios en la zona de previsualización.
+Una vez terminada la tarjeta podemos generar un link para compartirla. Si no hemos rellenado alguno de los campos obligatorios o hay algún error no nos permitirá crear la tarjeta y nos pedirá que revisemos nuestros datos.
 
 ## Cambios con respecto al Kit de Adalab
 - Meta para viewport añadida a `index.html`, **para que funcionen las media queries**.
