@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <title>Awesome Profile Cards</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat:400,700|Open+Sans:400,600&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="./favicon.png" />
+        <link href="./assets/css/main.css" rel="stylesheet" type="text/css" />
+        <script src="https://kit.fontawesome.com/afd95abdd2.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <img class="header__logo" src="./assets/images/download.svg" alt="awesome profile card logo">
+            </header>
+            <main class="main__card">
+                <section class="preview">
+                    <div class="preview__wrapper">
+                        <button class="btn-reset"><i class="far fa-trash-alt"></i> reset</button>
+                        <div class="card select-palette1"
+                        id="cardId">
+                            <div class="card__id">
+                                 <h3 id="cardName" class="card__id--name">Nombre Apellido</h3>
+
+                                <p id="cardJob" class="card__id--role">Front-end developer</p>
+                            </div>
+                            <div class="card__photo"></div>
+                            <div class="card__contacts">
+                                <ul> <a id="linkTelf" href=""><li id="cardTelf" class="contact-icon contact-icon-palette1 hidden"><i class="fas fa-mobile-alt"></i></li></a>
+
+                                    <a
+                                    id="linkEmail" href="">
+                                        <li id="cardEmail" class="contact-icon contact-icon-palette1 hidden"><i class="far fa-envelope"></i>
+
+                                        </li>
+                                        </a> <a id="linkLinkedin" href="" target="_blank"><li id="cardLinkedin" class="contact-icon contact-icon-palette1 hidden"><i class="fab fa-linkedin-in"></i></li></a>
+
+                                        <a
+                                        id="linkGithub" href="" target="_blank">
+                                            <li id="cardGithub" class="contact-icon contact-icon-palette1 hidden"><i class="fab fa-github-alt"></i>
+
+                                            </li>
+                                            </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="forms">
+                    <div class="section-wrapper">
+                        <form action="" method="POST" id="card__form">
+                            <!--DESIGN-------------------------------------------------->
+                            <section class="forms__section design">
+                                <div class="form-top" id="form-top-design">
+                                     <h2><i class="far fa-object-ungroup"></i> Diseña</h2>
+
+                                    <div class="form-arrow arrow-down" id="arrow-design"><i class="fas fa-chevron-down"></i>
+
+                                    </div>
+                                </div>
+                                <div class="form-bottom" id="form-bottom-design">
+                                    <p>Colores</p>
+                                    <ul>
+                                        <li class="select-palette  palette-1">
+                                            <input id="palette1" type="radio" name="palettes" checked>
+                                            <label class="palette" for="palette1">
+                                                <div class="palette__color color-1"></div>
+                                                <div class="palette__color color-2"></div>
+                                                <div class="palette__color color-3"></div>
+                                            </label>
+                                        </li>
+                                        <li class="select-palette palette-2">
+                                            <input id="palette2" type="radio" name="palettes">
+                                            <label class="palette" for="palette2">
+                                                <div class="palette__color color-1"></div>
+                                                <div class="palette__color color-2"></div>
+                                                <div class="palette__color color-3"></div>
+                                            </label>
+                                        </li>
+                                        <li class="select-palette palette-3">
+                                            <input id="palette3" type="radio" name="palettes">
+                                            <label class="palette" for="palette3">
+                                                <div class="palette__color color-1"></div>
+                                                <div class="palette__color color-2"></div>
+                                                <div class="palette__color color-3"></div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!--FILL----------------------------------------------------->
+                            <section class="forms__section fill">
+                                <div class="form-top" id="form-top-fill">
+                                     <h2><i class="far fa-keyboard"></i></i> Rellena</h2>
+
+                                    <div class="form-arrow arrow-down" id="arrow-fill"><i class="fas fa-chevron-down"></i>
+
+                                    </div>
+                                </div>
+                                <div class="form-bottom" id="form-bottom-fill">
+                                    <ul>
+                                        <li class="FullName">
+                                            <label for="FullName">Nombre completos<span>*</span>
+
+                                            </label>
+                                            <input placeholder="Ej: Sally Hill" id="fullName" type="text" name="FullName"
+                                            required>
+                                        </li>
+                                        <li class="job">
+                                            <label for="job">Puesto<span>*</span>
+
+                                            </label>
+                                            <input placeholder="Ej: Front-End unicorn" id="job" type="text" name="job"
+                                            required>
+                                            <label for="job"></label>
+                                        </li>
+                                        <li class="profile-picture">
+                                            <label>Imagen de perfil</label>
+                                            <div class="profile-picture__upload">
+                                                <button class="btn-upload">Añadir imagen</button>
+                                                <div class="thumbnail"></div>
+                                            </div>
+                                        </li>
+                                        <li class="email">
+                                            <label for="email">Email<span>*</span>
+
+                                            </label>
+                                            <input placeholder="Ej: sally-hill@gmail.com" id="email" type="email"
+                                            name="email" required>
+                                        </li>
+                                        <li class="telf">
+                                            <label for="telf">Teléfono<span>*</span>
+
+                                            </label>
+                                            <input placeholder="Ej: 555-55-55-55" id="telf" type="tel" name="telf"
+                                            required>
+                                        </li>
+                                        <li class="linkedin">
+                                            <label for="linkedin">Linkedin</label>
+                                            <input placeholder="linkedin.com/in/sally.hill" id="linkedin"
+                                            type="text" name="linkedin">
+                                        </li>
+                                        <li class="github">
+                                            <label for="github">Github</label>
+                                            <input placeholder="@sally-hill" id="github" type="text"
+                                            name="github">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!--SHARE---------------------------------------------------->
+                            <section class="forms__section share">
+                                <div class="form-top" id="form-top-share">
+                                     <h2><i class="fas fa-share-alt"></i></i> Comparte</h2>
+
+                                    <div class="form-arrow arrow-down" id="arrow-share"><i class="fas fa-chevron-down"></i>
+
+                                    </div>
+                                </div>
+                                <div class="form-bottom" id="form-bottom-share">
+                                    <button class="btn-create  btn-create-inactive" id="btn-create"><i class="far fa-address-card"></i> Crear tarjeta</button>
+                                    <div class="card__share hidden"
+                                    id="card-share">
+                                        <p>La tarjeta ha sido creada:</p>
+                                        <p class="card__link">card link</p>
+                                        <button class="btn-twitter"><i class="fab fa-twitter"></i> Compartir en twitter</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__copyright">Awesome profile-cards ©2019</p>
+                <div class="footer__logo"> <a href="https://adalab.es/" target="_blank">
+            <img class="footer__logo-image" src="./assets/images/logo-adalab.png" alt="go to Adalab web">
+        </a>
+
+                </div>
+            </footer>
+        </div>
+        <script src="./assets/js/main.js" type="text/javascript"></script>
+    </body>
+
+</html>
