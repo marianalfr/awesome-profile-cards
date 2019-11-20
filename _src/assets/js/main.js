@@ -58,7 +58,7 @@ function fillEmail() {
         linkEmail.href = `mailto:${inputEmail.value}`;
     }
     else {
-        cardLEmail.classList.add('hidden');
+        cardEmail.classList.add('hidden');
     }
 };
 
@@ -82,10 +82,10 @@ function fillGithub() {
     }
 };
 
-inputTelf.addEventListener('change', fillTelf);
-inputEmail.addEventListener('change', fillEmail);
-inputLinkedin.addEventListener('change', fillLinkedin);
-inputGithub.addEventListener('change', fillGithub);
+inputTelf.addEventListener('keyup', fillTelf);
+inputEmail.addEventListener('keyup', fillEmail);
+inputLinkedin.addEventListener('keyup', fillLinkedin);
+inputGithub.addEventListener('keyup', fillGithub);
 
 /////////////////////////////////////////////////////////
 // Add color preview
@@ -94,46 +94,134 @@ const palette1 = document.querySelector('#palette1');
 const palette2 = document.querySelector('#palette2');
 const palette3 = document.querySelector('#palette3');
 const cardPreview = document.querySelector('#cardId');
+const contactIcons = document.querySelectorAll('.contact-icon');
 
 
 
     function previewPalette1 () {
-        cardPreview.classList.add(select-palette1);
-        cardPreview.classList.remove(select-palette2);
-        cardPreview.classList.remove(select-palette3);
+        cardPreview.classList.add('select-palette1');
+        cardPreview.classList.remove('select-palette2');
+        cardPreview.classList.remove('select-palette3');
+
+        for (let icon of contactIcons){
+        icon.classList.add('contact-icon-palette1');
+        icon.classList.remove('contact-icon-palette2');
+        icon.classList.remove('contact-icon-palette3');
+        };
     };
      function previewPalette2() {
-        cardPreview.classList.add(select-palette2);
-        cardPreview.classList.remove(select-palette1);
-        cardPreview.classList.remove(select-palette3);
+        cardPreview.classList.add('select-palette2');
+        cardPreview.classList.remove('select-palette1');
+        cardPreview.classList.remove('select-palette3');
+
+        for (let icon of contactIcons){
+        icon.classList.add('contact-icon-palette2');
+        icon.classList.remove('contact-icon-palette1');
+        icon.classList.remove('contact-icon-palette3');
+        };
     };
     function previewPalette3() {
-        cardPreview.classList.add(select-palette3);
-        cardPreview.classList.remove(select-palette2);
-        cardPreview.classList.remove(select-palette1);
+        cardPreview.classList.add('select-palette3');
+        cardPreview.classList.remove('select-palette2');
+        cardPreview.classList.remove('select-palette1');
+
+        for (let icon of contactIcons){
+        icon.classList.add('contact-icon-palette3');
+        icon.classList.remove('contact-icon-palette2');
+        icon.classList.remove('contact-icon-palette1');
+        };
     };
 
 palette1.addEventListener ('change',previewPalette1);
 palette2.addEventListener ('change',previewPalette2);
 palette3.addEventListener ('change',previewPalette3);
 
+
+/////////////////////////////////////////////////////////
+//  toggle 
+
+const formTopDesign = document.querySelector('#form-top-design');
+const formBottomDesign = document.querySelector('#form-bottom-design');
+const formTopFill = document.querySelector('#form-top-fill');
+const formBottomFill = document.querySelector('#form-bottom-fill');
+const formTopShare = document.querySelector('#form-top-share');
+const formBottomShare = document.querySelector('#form-bottom-share');
+
+const arrowDesign = document.querySelector('#arrow-design');
+const arrowFill = document.querySelector('#arrow-fill');
+const arrowShare = document.querySelector('#arrow-share');
+
+
+function toggleDesign(){
+    formBottomDesign.classList.toggle('form-bottom-collapse');
+    formBottomFill.classList.remove('form-bottom-collapse');
+    formBottomShare.classList.remove('form-bottom-collapse');
+
+    arrowDesign.classList.toggle('form-arrow-collapse');
+    arrowFill.classList.remove('form-arrow-collapse');
+    arrowShare.classList.remove('form-arrow-collapse');
+}
+
+function toggleFill() {
+    formBottomFill.classList.toggle('form-bottom-collapse');
+    formBottomDesign.classList.remove('form-bottom-collapse');
+    formBottomShare.classList.remove('form-bottom-collapse');
+
+    arrowFill.classList.toggle('form-arrow-collapse');
+    arrowDesign.classList.remove('form-arrow-collapse');
+    arrowShare.classList.remove('form-arrow-collapse');
+}
+function toggleShare() {
+    formBottomShare.classList.toggle('form-bottom-collapse');
+    formBottomDesign.classList.remove('form-bottom-collapse');
+    formBottomFill.classList.remove('form-bottom-collapse');
+
+    arrowShare.classList.toggle('form-arrow-collapse');
+    arrowFill.classList.remove('form-arrow-collapse');
+    arrowDesign.classList.remove('form-arrow-collapse');
+}
+formTopDesign.addEventListener('click', toggleDesign);
+formTopFill.addEventListener('click', toggleFill);
+formTopShare.addEventListener('click', toggleShare);
+
+
 /////////////////////////////////////////////////////////
 // form validation
 
-/*const cardForm = document.querySelector('#card__form');
+const cardForm = document.querySelector('#card__form');
 const buttonCreate = document.querySelector('#btn-create');
-const input = cardForm.querySelector('input');
 
 function inactiveButton (){
-    if (cardForm.checkValidity === false){
-        buttonCreate.classList.add('btn-create-inactive');
+    if (cardForm.checkValidity() === true){
+        buttonCreate.classList.remove('btn-create-inactive');
     }
 }
 
-.addEventListener('')*/
+formTopShare.addEventListener('click', inactiveButton);
+
 
 /////////////////////////////////////////////////////////
-// 
+// Show share link on click
+
+const cardShare = document.querySelector('#card-share');
+
+function shareLink(event){
+    if (cardForm.checkValidity() === true) {
+        cardShare.classList.remove('hidden');
+        event.preventDefault();
+    }
+    else {
+        event.preventDefault();
+    }
+}
+
+buttonCreate.addEventListener('click', shareLink);
+
+
+
+
+
+
 
 
 

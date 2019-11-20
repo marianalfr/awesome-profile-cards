@@ -1,13 +1,11 @@
+.hidden{
+    display: none;
+}
+
 .select-palette1{
     .card__id{
         border-left: solid 5px $color-palette1c2;
         h3{
-            color: $color-palette1c1;
-        }
-    }
-    .card__contacs ul{
-        .contact-icon{
-            border: solid 2px $color-palette1c3;
             color: $color-palette1c1;
         }
     }
@@ -20,12 +18,6 @@
             color: $color-palette2c1;
         }
     }
-    .card__contacs ul{
-        .contact-icon{
-            border: solid 2px $color-palette2c3;
-            color: $color-palette2c1;
-        }
-    }
 }
 
 .select-palette3{
@@ -35,10 +27,19 @@
             color: $color-palette3c1;
         }
     }
-    .card__contacs ul{
-        .contact-icon{
-            border: solid 2px $color-palette3c3;
-            color: $color-palette3c1;
-        }
-    }
+}
+
+.contact-icon-palette1{
+    border: solid 2px $color-palette1c3;
+    color: $color-palette1c1;
+}
+
+.contact-icon-palette2{
+    border: solid 2px $color-palette2c3;
+    color: $color-palette2c1;
+}
+
+.contact-icon-palette3{
+    border: solid 2px $color-palette3c3;
+    color: $color-palette3c1;
 }

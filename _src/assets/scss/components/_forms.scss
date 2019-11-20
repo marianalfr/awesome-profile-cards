@@ -12,6 +12,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 20px;
+            cursor: pointer;
+
+            &:hover  > .form-arrow{
+                color: $color-main;
+            }
             
             h2{
                 font-size: rem(18);  
@@ -22,53 +28,36 @@
                     color:$color-main;
                 }
             }
+
+            .form-arrow{
+                width: 18px;
+                text-align: right;
+                font-size: rem(18);
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), color 0.5s ease;
+            }
+
+            .form-arrow-collapse{
+                transform: rotate(180deg);
+            }
         }
 
         .forms__section{
             border-bottom: 1px solid $color-white-2;
+            margin-bottom: 20px;
         }
 
         .form-bottom{
             max-height: 0px;
-            padding-top: 28px;
             transition:max-height 0.5s; 
             overflow:hidden;
 
             label span{
                 color: $color-main;
             }
+        
         }
-
-        .form-arrow{
-            width: 18px;
-            text-align: right;
-            font-size: rem(18);
-            position: relative;
-            top: 20px;
-            float: right;
-            right: -15px;
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), color 0.5s ease;
-        }
-
-        .arrow-checkbox{
-            position: relative;
-            float: right;
-            top: 20px;
-            opacity: 0;
-            z-index: 3;
-            cursor: pointer;
-
-            &:checked ~ .form-bottom{
-                max-height: 600px;
-            }
-
-            &:checked ~ .form-arrow{
-                transform: rotate(180deg);
-            }
-
-            &:hover ~ .form-arrow{
-                color: $color-main;
-            }
+        .form-bottom-collapse{
+            max-height: 600px;
         }
 
         .design{
@@ -189,6 +178,9 @@
                             height: 30px;
                             margin-left: 20px;
                             border: solid 1px $color-secondary-lighter;
+                            background-image: url('../images/profile-picture.gif');
+                            background-size: cover;
+                            background-position: center;
                         }
                     }
                 }
