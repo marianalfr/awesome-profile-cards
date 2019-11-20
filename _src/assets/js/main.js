@@ -211,6 +211,7 @@ function shareLink(event){
         event.preventDefault();
     }
     else {
+        alert('No se puede crear la tarjeta. Revisa tus datos, por favor.')
         event.preventDefault();
     }
 }
