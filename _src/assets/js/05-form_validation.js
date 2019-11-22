@@ -9,6 +9,8 @@ const buttonCreate = document.querySelector('#btn-create');
 function inactiveButton (){
     if (cardForm.checkValidity() === true){
         buttonCreate.classList.remove('btn-create-inactive');
+    } else {
+        buttonCreate.classList.add('btn-create-inactive');
     }
 }
 

@@ -11,7 +11,8 @@ function shareLink(event){
         event.preventDefault();
     }
     else {
-        alert('No se puede crear la tarjeta. Revisa tus datos, por favor.')
+        alert('No se puede crear la tarjeta. Revisa tus datos, por favor.');
+        cardShare.classList.add('hidden');
         event.preventDefault();
     }
 }
