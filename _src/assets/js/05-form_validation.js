@@ -17,10 +17,10 @@ function validateEmail() {
 
 function validateTelf() {
     const telfError = document.querySelector('#error-telf');
-    if (/^[\s\S]{0,9}$/.test(inputTelf.value)) {
+    if (inputTelf.value === NaN) {
         inputTelf.classList.remove('input-error');
         telfError.classList.add('hidden');
-        return (true)
+        return (true);
     } else {
         inputTelf.classList.add('input-error');
         telfError.classList.remove('hidden');
