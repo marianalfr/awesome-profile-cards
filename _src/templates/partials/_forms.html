@@ -46,7 +46,7 @@
                 <div class="form-bottom" id="form-bottom-fill">
                     <ul>
                         <li class="FullName">
-                            <label for="FullName">Nombre completos<span>*</span></label>
+                            <label for="FullName">Nombre completo<span>*</span></label>
                             <input placeholder="Ej: Sally Hill" id="fullName" type="text" name="FullName" required>
                         </li>
                         <li class="job">
@@ -54,15 +54,17 @@
                             <input placeholder="Ej: Front-End unicorn" id="job" type="text" name="job" required><label for="job"></label>
                         </li>
                         <li class="profile-picture">
-                            <label> Imagen de perfil</label>
+                            <label for="image"> Imagen de perfil</label>
+                            <input type="file" name="image" class="hidden js__profile-upload-btn">
                             <div class="profile-picture__upload">
-                            <button class="btn-upload">Añadir imagen</button>
-                            <div class="thumbnail"></div>
+                            <button class="btn-upload js__profile-trigger">Añadir imagen</button>
+                            <div class="thumbnail js__profile-preview"></div>
                             </div>
                         </li>
                         <li class="email">
                             <label for="email">Email<span>*</span></label>
                             <input placeholder="Ej: sally-hill@gmail.com" id="email" type="email" name="email" required>
+                            <p  id="error-email" class="text-error hidden">Introduce un email válido.</p>
                         </li>
                         <li class="telf">
                             <label for="telf">Teléfono<span>*</span></label>
