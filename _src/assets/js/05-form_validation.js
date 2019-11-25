@@ -17,7 +17,7 @@ function validateEmail() {
 
 function validateTelf() {
     const telfError = document.querySelector('#error-telf');
-    if (inputTelf.value === NaN) {
+    if (inputTelf.value !== NaN) {
         inputTelf.classList.remove('input-error');
         telfError.classList.add('hidden');
         return (true);
@@ -31,6 +31,36 @@ function validateTelf() {
 
 inputEmail.addEventListener('change', validateEmail);
 inputTelf.addEventListener('change', validateTelf);
+
+function validateFullName() {
+    const nameError = document.querySelector('#error-name-job');
+    if (inputFullName.value === '') {
+        inputFullName.classList.add('input-error')
+        nameError.classList.remove('hidden');
+        return (true);
+    } else {
+        inputFullName.classList.remove('input-error')
+        nameError.classList.add('hidden');
+        return (false);
+    }
+}
+formTopShare.addEventListener('click', validateFullName);
+
+function validateJob() {
+    const jobError = document.querySelector('#error-name-job');
+    if (inputJob.value === '') {
+        inputJob.classList.add('input-error')
+        jobError.classList.remove('hidden');
+        return (true);
+    } else {
+        inputJob.classList.remove('input-error')
+        jobError.classList.add('hidden');
+        return (false);
+    }
+}
+formTopShare.addEventListener('click', validateJob);
+
+
 
 
 /////////////////////////////////////////////////////////
