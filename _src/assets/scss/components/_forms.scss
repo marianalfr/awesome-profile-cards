@@ -206,6 +206,11 @@
         .share{
             text-align: center;
 
+            .text-error{
+                color: $color-error;
+                font-size: rem(12);
+            }
+
             .btn-create{
                 margin-top: 2px;
                 margin-bottom: 30px;
