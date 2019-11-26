@@ -56,12 +56,14 @@
                                 for="job"></label>
                         </li>
                         <li class="profile-picture">
-                            <label for="image"> Imagen de perfil</label>
-                            <input type="file" name="image" class="hidden js__profile-upload-btn">
+                            <label for="image"> Imagen de perfil<span>*</span></label>
+                            <input id="image-input" type="file" name="image" class="hidden js__profile-upload-btn"
+                                required>
                             <div class="profile-picture__upload">
                                 <button class="btn-upload js__profile-trigger">Añadir imagen</button>
                                 <div class="thumbnail js__profile-preview"></div>
                             </div>
+                            <p id="error-image" class="text-error hidden">Sube una imagen.</p>
                         </li>
                         <li class="email">
                             <label for="email">Email<span>*</span></label>
@@ -69,17 +71,21 @@
                             <p id="error-email" class="text-error hidden">Introduce un email válido.</p>
                         </li>
                         <li class="telf">
-                            <label for="telf">Teléfono<span>*</span></label>
+                            <label for="telf">Teléfono</label>
                             <input placeholder="Ej: 555-55-55-55" id="telf" type="tel" name="telf" required>
                             <p id="error-telf" class="text-error hidden">Introduce un teléfono válido.</p>
                         </li>
                         <li class="linkedin">
-                            <label for="linkedin">Linkedin</label>
-                            <input placeholder="sally-hill" id="linkedin" type="text" name="linkedin">
+                            <label for="linkedin">Linkedin<span>*</span></label>
+                            <input placeholder="sally-hill" id="linkedin" type="text" name="linkedin" required>
+                            <p id="error-linkedin" class="text-error hidden">Introduce tu nombre de usuario de Linkedin
+                                sin @.</p>
                         </li>
                         <li class="github">
-                            <label for="github">Github</label>
-                            <input placeholder="sally-hill" id="github" type="text" name="github">
+                            <label for="github">Github<span>*</span></label>
+                            <input placeholder="sally-hill" id="github" type="text" name="github" required>
+                            <p id="error-github" class="text-error hidden">Introduce tu nombre de usuario de Github
+                                sin @.</p>
                         </li>
                     </ul>
                 </div>

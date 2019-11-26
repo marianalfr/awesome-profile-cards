@@ -2,6 +2,7 @@
 
 //// Individual validation
 
+
 function validateEmail() {
     const emailError = document.querySelector('#error-email');
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value)) {
@@ -15,21 +16,21 @@ function validateEmail() {
     }
 }
 
-function validateTelf() {
-    const telfError = document.querySelector('#error-telf');
-    if (/^\d+$/.test(inputTelf.value)) {
-        inputTelf.classList.remove('input-error');
-        telfError.classList.add('hidden');
-        return (true);
-    } else {
-        inputTelf.classList.add('input-error');
-        telfError.classList.remove('hidden');
-        return (false);
-    }
-}
+// function validateTelf() {
+//     const telfError = document.querySelector('#error-telf');
+//     if (/^\d+$/.test(inputTelf.value)) {
+//         inputTelf.classList.remove('input-error');
+//         telfError.classList.add('hidden');
+//         return (true);
+//     } else {
+//         inputTelf.classList.add('input-error');
+//         telfError.classList.remove('hidden');
+//         return (false);
+//     }
+// }
 
 inputEmail.addEventListener('change', validateEmail);
-inputTelf.addEventListener('change', validateTelf);
+// inputTelf.addEventListener('change', validateTelf);
 
 const globalError = document.querySelector('#error-name-job');
 
@@ -53,13 +54,58 @@ function validateJob() {
     }
 }
 
+const imageInput = document.querySelector('#image-input');
+function validateImage() {
+    const imageError = document.querySelector('#error-image');
+    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value)) {
+        imageError.classList.add('hidden');
+        return (true);
+    } else {
+        imageError.classList.remove('hidden');
+        return (false);
+    }
+}
+imageInput.addEventListener('change', validateImage);
+
+function validateLinkedin() {
+    const linkedinError = document.querySelector('#error-linkedin');
+
+    if (inputLinkedin.value === '') {
+        inputLinkedin.classList.add('input-error');
+        linkedinError.classList.remove('hidden');
+        return (false);
+    } else {
+        inputLinkedin.classList.remove('input-error');
+        linkedinError.classList.add('hidden');
+        return (true);
+    }
+}
+
+function validateGithub() {
+    const githubError = document.querySelector('#error-github');
+
+    if (inputGithub.value === '') {
+        inputGithub.classList.add('input-error');
+        githubError.classList.remove('hidden');
+        return (false);
+    } else {
+        inputGithub.classList.remove('input-error');
+        githubError.classList.add('hidden');
+        return (true);
+    }
+}
+
+const cardForm = document.querySelector('#card__form');
+const buttonCreate = document.querySelector('#btn-create');
 
 function validateAll() {
-    if (validateJob() === true && validateFullName() === true && validateEmail() === true && validateTelf() === true) {
+    if (validateJob() === true && validateFullName() === true && validateEmail() === true && validateLinkedin() === true && validateGithub() === true && validateImage() === true) {
         globalError.classList.add('hidden');
+        buttonCreate.classList.remove('btn-create-inactive');
     }
     else {
         globalError.classList.remove('hidden');
+        buttonCreate.classList.add('btn-create-inactive');
     }
 
 };
@@ -69,19 +115,5 @@ formTopShare.addEventListener('click', validateAll);
 
 
 
-/////////////////////////////////////////////////////////
-// form validation
 
-const cardForm = document.querySelector('#card__form');
-const buttonCreate = document.querySelector('#btn-create');
-
-function inactiveButton() {
-    if (cardForm.checkValidity() === true) {
-        buttonCreate.classList.remove('btn-create-inactive');
-    } else {
-        buttonCreate.classList.add('btn-create-inactive');
-    }
-}
-
-formTopShare.addEventListener('click', inactiveButton);
 
