@@ -19,13 +19,13 @@ let storedData = {};
 
 function storePalette(){
     if(palette2.checked){
-        storedData.theme = palette2Value;
+        storedData.theme = palette2.value;
         console.log(storedData);
     } else if (palette3.checked){
-        storedData.theme = palette3Value;
+        storedData.theme = palette3.value;
         console.log(storedData);
     }  else {
-        storedData.theme = palette1Value;
+        storedData.theme = palette1.value;
         console.log(storedData);
     }
     storeData();
@@ -65,28 +65,28 @@ function storeData(){
 };
 
 function retrieveData(){
-    const savedData = JSON.parse(localStorage.getItem('Details'));
+    storedData = JSON.parse(localStorage.getItem('Details'));
 
-    if (savedData.name !== ''){
-        inputFullName.value = savedData.name;
+    if (storedData.name !== ''){
+        inputFullName.value = storedData.name;
     }
-    if (savedData.job !== ''){
-        inputJob.value = savedData.job;
+    if (storedData.job !== ''){
+        inputJob.value = storedData.job;
     }
-    if (savedData.image !== ''){
-        inputImage.src = savedData.image;
+    if (storedData.image !== ''){
+        inputImage.src = storedData.image;
     }
-    if (savedData.email !== ''){
-        inputEmail.value = savedData.email;
+    if (storedData.email !== ''){
+        inputEmail.value = storedData.email;
     }
-    if (savedData.telf !== ''){
-        inputTelf.value= savedData.telf;
+    if (storedData.telf !== ''){
+        inputTelf.value= storedData.telf;
     }
-    if (savedData.linkedin !== ''){
-        inputLinkedin.value = savedData.linkedin;
+    if (storedData.linkedin !== ''){
+        inputLinkedin.value = storedData.linkedin;
     }
-    if (savedData.github !== ''){
-        inputGithub.value = savedData.github;
+    if (storedData.github !== ''){
+        inputGithub.value = storedData.github;
     }
 }
 
@@ -101,7 +101,6 @@ inputEmail.addEventListener('change', storeEmail);
 inputTelf.addEventListener('change', storeTelf);
 inputLinkedin.addEventListener('change', storeLinkedin);
 inputGithub.addEventListener('change', storeGithub);
-
 
 
 
