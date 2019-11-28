@@ -57,7 +57,8 @@ function validateJob() {
 const imageInput = document.querySelector('#image-input');
 function validateImage() {
     const imageError = document.querySelector('#error-image');
-    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value)) {
+    const localStoredData = JSON.parse(localStorage.getItem('Details'));
+    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value) || localStoredData.image !== '') {
         imageError.classList.add('hidden');
         return (true);
     } else {
@@ -102,6 +103,7 @@ function validateAll() {
     if (validateJob() === true && validateFullName() === true && validateEmail() === true && validateLinkedin() === true && validateGithub() === true && validateImage() === true) {
         globalError.classList.add('hidden');
         buttonCreate.classList.remove('btn-create-inactive');
+        return true;
     }
     else {
         globalError.classList.remove('hidden');
@@ -112,6 +114,7 @@ function validateAll() {
         validateLinkedin();
         validateGithub();
         validateImage();
+        return false;
     }
 
 };

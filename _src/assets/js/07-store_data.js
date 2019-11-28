@@ -21,9 +21,9 @@ let storedData = {
     theme: '',
     name: '',
     job: '',
-    image: '',
+    photo: '',
     email: '',
-    telf: '',
+    phone: '',
     linkedin: '',
     github: ''
 };
@@ -55,7 +55,7 @@ function storeEmail(){
     storeData();
 }
 function storeTelf(){
-    storedData.telf = inputTelf.value;
+    storedData.phone = inputTelf.value;
     storeData();
 }
 function storeLinkedin(){
@@ -110,8 +110,8 @@ function retrieveData(){
     if (storedData.email !== ''){
         inputEmail.value = storedData.email;
     }
-    if (storedData.telf !== ''){
-        inputTelf.value= storedData.telf;
+    if (storedData.phone !== ''){
+        inputTelf.value= storedData.phone;
     }
     if (storedData.linkedin !== ''){
         inputLinkedin.value = storedData.linkedin;
@@ -132,9 +132,9 @@ function setTheme(){
 }
 
 function setImage(){
-    if (storedData.image !== ''){
-        profileImage.style.backgroundImage = `url(${storedData.image})`;
-        profilePreview.style.backgroundImage = `url(${storedData.image})`;
+    if (storedData.photo !== ''){
+        profileImage.style.backgroundImage = `url(${storedData.photo})`;
+        profilePreview.style.backgroundImage = `url(${storedData.photo})`;
     }
 
     
