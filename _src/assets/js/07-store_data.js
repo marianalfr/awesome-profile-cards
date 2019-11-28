@@ -39,10 +39,6 @@ function storeJob(){
     storedData.job = inputJob.value;
     storeData();
 }
-function storeImage(){
-    storedData.image = inputImage.value;
-    storeData();
-}
 function storeEmail(){
     storedData.email = inputEmail.value;
     storeData();
@@ -64,9 +60,15 @@ function storeData(){
     localStorage.setItem('Details', JSON.stringify(storedData));
 };
 
+// function storeImage(){
+//     storedData.image = inputImage.value;
+//     storeData();
+// }
+
 function checkLocalStorage (){
     if (localStorage.getItem('Details')!== null){
         retrieveData();
+        init();
     }
 }
 
@@ -94,9 +96,6 @@ function retrieveData(){
     if (storedData.job !== ''){
         inputJob.value = storedData.job;
     }
-    if (storedData.image !== ''){
-        inputImage.src = storedData.image;
-    }
     if (storedData.email !== ''){
         inputEmail.value = storedData.email;
     }
@@ -111,13 +110,42 @@ function retrieveData(){
     }
 }
 
+function setTheme(){
+    if(palette2.checked){
+        previewPalette2();
+    } else if(palette3.checked){
+        previewPalette3();
+    } else {
+        previewPalette1();
+    }
+}
+
+function setImage(){
+    if (storedData.image !== ''){
+        profileImage.style.backgroundImage = `url(${storedData.image})`;
+        profilePreview.style.backgroundImage = `url(${storedData.image})`;
+    }
+
+    
+}
+
+function init(){
+    printName();
+    printJob();
+    fillTelf();
+    fillEmail();
+    fillLinkedin();
+    fillGithub();
+    setTheme();
+    setImage();
+}
+
 window.addEventListener('load', checkLocalStorage);
 palette1.addEventListener('click', storePalette);
 palette2.addEventListener('click', storePalette);
 palette3.addEventListener('click', storePalette);
 inputFullName.addEventListener('change', storeFullName);
 inputJob.addEventListener('change', storeJob);
-inputImage.addEventListener('change', storeImage);
 inputEmail.addEventListener('change', storeEmail);
 inputTelf.addEventListener('change', storeTelf);
 inputLinkedin.addEventListener('change', storeLinkedin);
