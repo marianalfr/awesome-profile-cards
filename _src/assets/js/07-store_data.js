@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////////////
 // Define variables to store data
 const inputImage = document.querySelector('#image-input');
+const btnReset = document.querySelector('#btn-reset');
 
 let palette1Value = palette1.value;
 let palette2Value = palette2.value;
@@ -15,7 +16,17 @@ let emailValue = inputEmail.value;
 let linkedinValue = inputLinkedin.value;
 let githubValue = inputGithub.value;
 
-let storedData = {};
+
+let storedData = {
+    theme: '',
+    name: '',
+    job: '',
+    image: '',
+    email: '',
+    telf: '',
+    linkedin: '',
+    github: ''
+};
 
 function storePalette(){
     if(palette2.checked){
@@ -32,8 +43,8 @@ function storePalette(){
 }
 
 function storeFullName(){
-    storedData.name = inputFullName.value;
-    storeData();
+        storedData.name = inputFullName.value;
+        storeData();   
 }
 function storeJob(){
     storedData.job = inputJob.value;
@@ -140,6 +151,27 @@ function init(){
     setImage();
 }
 
+function reset(){
+    localStorage.removeItem('Details');
+    inputFullName.value = '';
+    inputJob.value = '';
+    inputEmail.value = '';
+    inputTelf.value = '';
+    inputLinkedin.value = '';
+    inputGithub.value = '';
+    cardName.innerHTML = 'Nombre Apellidos';
+    cardJob.innerHTML = 'Front-end developer';
+
+    const imageUrl = '../assets/images/profile-picture.gif';
+    profileImage.style.backgroundImage = `url(${imageUrl})`;
+    profilePreview.style.backgroundImage = `url(${imageUrl})`;
+
+    fillTelf();
+    fillEmail();
+    fillLinkedin();
+    fillGithub();
+}
+
 window.addEventListener('load', checkLocalStorage);
 palette1.addEventListener('click', storePalette);
 palette2.addEventListener('click', storePalette);
@@ -150,6 +182,7 @@ inputEmail.addEventListener('change', storeEmail);
 inputTelf.addEventListener('change', storeTelf);
 inputLinkedin.addEventListener('change', storeLinkedin);
 inputGithub.addEventListener('change', storeGithub);
+btnReset.addEventListener('click', reset);
 
 
 
