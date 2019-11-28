@@ -64,8 +64,29 @@ function storeData(){
     localStorage.setItem('Details', JSON.stringify(storedData));
 };
 
+function checkLocalStorage (){
+    if (localStorage.getItem('Details')!== null){
+        retrieveData();
+    }
+}
+
 function retrieveData(){
     storedData = JSON.parse(localStorage.getItem('Details'));
+    if(storedData.theme !== undefined){
+        if(storedData.theme === palette2.value){
+            palette2.checked = true;
+            palette1.checked = false;
+            palette3.checked = false
+        } else if(storedData.theme === palette3.value){
+            palette3.checked = true;
+            palette2.checked = false;
+            palette1.checked = false
+        } else{
+            palette3.checked = false;
+            palette2.checked = false;
+            palette1.checked = true;
+        }
+    }
 
     if (storedData.name !== ''){
         inputFullName.value = storedData.name;
@@ -90,7 +111,7 @@ function retrieveData(){
     }
 }
 
-window.addEventListener('load', retrieveData);
+window.addEventListener('load', checkLocalStorage);
 palette1.addEventListener('click', storePalette);
 palette2.addEventListener('click', storePalette);
 palette3.addEventListener('click', storePalette);
