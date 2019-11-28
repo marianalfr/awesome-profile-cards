@@ -106,6 +106,12 @@ function validateAll() {
     else {
         globalError.classList.remove('hidden');
         buttonCreate.classList.add('btn-create-inactive');
+        validateJob();
+        validateFullName();
+        validateEmail();
+        validateLinkedin();
+        validateGithub();
+        validateImage();
     }
 
 };
