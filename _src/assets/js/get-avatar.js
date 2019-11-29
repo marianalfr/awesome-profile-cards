@@ -32,6 +32,9 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  storedData.photo = fr.result;
+    storeData();
+  //localStorage.setItem('image', fr.result);
 }
 
 
