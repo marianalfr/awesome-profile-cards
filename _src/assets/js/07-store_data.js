@@ -18,7 +18,7 @@ let githubValue = inputGithub.value;
 
 
 let storedData = {
-    theme: '',
+    palette: '',
     name: '',
     job: '',
     photo: '',
@@ -30,13 +30,13 @@ let storedData = {
 
 function storePalette(){
     if(palette2.checked){
-        storedData.theme = palette2.value;
+        storedData.palette = palette2.value;
         console.log(storedData);
     } else if (palette3.checked){
-        storedData.theme = palette3.value;
+        storedData.palette = palette3.value;
         console.log(storedData);
     }  else {
-        storedData.theme = palette1.value;
+        storedData.palette = palette1.value;
         console.log(storedData);
     }
     storeData();
@@ -85,12 +85,12 @@ function checkLocalStorage (){
 
 function retrieveData(){
     storedData = JSON.parse(localStorage.getItem('Details'));
-    if(storedData.theme !== undefined){
-        if(storedData.theme === palette2.value){
+    if(storedData.palette !== undefined){
+        if(storedData.palette === palette2.value){
             palette2.checked = true;
             palette1.checked = false;
             palette3.checked = false
-        } else if(storedData.theme === palette3.value){
+        } else if(storedData.palette === palette3.value){
             palette3.checked = true;
             palette2.checked = false;
             palette1.checked = false
