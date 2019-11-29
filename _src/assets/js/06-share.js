@@ -6,7 +6,7 @@
 const cardShare = document.querySelector('#card-share');
 
 function shareLink(event) {
-    if (cardForm.checkValidity() === true) {
+    if (validateAll() === true) {
         cardShare.classList.remove('hidden');
         event.preventDefault();
     }
@@ -16,4 +16,4 @@ function shareLink(event) {
     }
 }
 
-buttonCreate.addEventListener('click', shareLink);
+ //buttonCreate.addEventListener('click', shareLink);
