@@ -161,6 +161,7 @@ function reset(){
     inputGithub.value = '';
     cardName.innerHTML = 'Nombre Apellidos';
     cardJob.innerHTML = 'Front-end developer';
+    palette1.checked = true;
 
     const imageUrl = './assets/images/profile-picture.gif';
     profileImage.style.backgroundImage = `url(${imageUrl})`;
@@ -170,6 +171,7 @@ function reset(){
     fillEmail();
     fillLinkedin();
     fillGithub();
+    setTheme();
 }
 
 window.addEventListener('load', checkLocalStorage);
