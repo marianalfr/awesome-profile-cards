@@ -6,29 +6,25 @@ let photoSend = '';
 
 function sendData(){
 
-  //  event.preventDefault(); *********
+    fetch (urlBase,{
+        method: 'POST',
+        body: localStorage.getItem('Details'),
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    .then (response => response.json())
+    .then (data => showURL(data))
+    .catch (function(error){console.log(error)})
 
-  fetch (urlBase,{
-      method: 'POST',
-      body: localStorage.getItem('Details'),
-      headers: {
-          'content-type': 'application/json'
-      }
-  })
-  .then (response => response.json())
-  .then (data => showURL(data))
-.catch (function(error){console.log(error)})
-
-
-  shareLink(event);
-  
-
+    shareLink(event);
 }
 
 function showURL(data){
     if(data.success){
         cardLink.innerHTML = `<a class="twitter-url" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
-        shareTwitter(data.cardURL);
+        twitterLink(data.cardURL);
+
     } else {
         cardLink.innerHTML = 'ERROR: ' + data.error;
     }
@@ -37,3 +33,10 @@ function showURL(data){
 buttonCreate.addEventListener('click', sendData);
 
 
+//https://twitter.com/intent/tweet?text=Hello%0AWorld
+//href="https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20Awesome%20Profile%20Cards%20:%0A${data.cardURL}"
+
+function twitterLink(URL){
+    const twitterLink = document.querySelector('#twitter-share');
+    twitterLink.href = `https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20Awesome%20Profile%20Cards:%0A${URL}`;
+}
