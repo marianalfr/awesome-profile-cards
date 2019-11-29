@@ -172,6 +172,10 @@ function reset(){
     fillLinkedin();
     fillGithub();
     setTheme();
+
+    validateAll();
+
+    cardShare.classList.add('hidden');
 }
 
 window.addEventListener('load', checkLocalStorage);
