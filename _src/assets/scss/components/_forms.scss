@@ -169,14 +169,14 @@
                }
 
                .input-error{
-                border: solid 2px $color-error;
+                border: solid 1px $color-error;
 
                }
 
                .text-error{
                    color: $color-error;
-                   font-size: rem(12);
-                   margin-top: -5px;
+                   font-size: rem(11);
+                   margin-top: -12px;
                }
 
                ::placeholder{
