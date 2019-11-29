@@ -58,7 +58,7 @@ const imageInput = document.querySelector('#image-input');
 function validateImage() {
     const imageError = document.querySelector('#error-image');
     const localStoredData = JSON.parse(localStorage.getItem('Details'));
-    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value) || localStoredData.image !== '') {
+    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value) || localStoredData.photo !== '') {
         imageError.classList.add('hidden');
         return (true);
     } else {

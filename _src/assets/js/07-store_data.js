@@ -174,6 +174,7 @@ function reset(){
     setTheme();
 
     validateAll();
+    toggleDesign()
 
     cardShare.classList.add('hidden');
 }
