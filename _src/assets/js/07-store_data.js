@@ -162,7 +162,7 @@ function reset(){
     cardName.innerHTML = 'Nombre Apellidos';
     cardJob.innerHTML = 'Front-end developer';
 
-    const imageUrl = '../assets/images/profile-picture.gif';
+    const imageUrl = './assets/images/profile-picture.gif';
     profileImage.style.backgroundImage = `url(${imageUrl})`;
     profilePreview.style.backgroundImage = `url(${imageUrl})`;
 
