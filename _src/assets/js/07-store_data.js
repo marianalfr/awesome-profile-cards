@@ -141,8 +141,20 @@ function setImage(){
 }
 
 function init(){
-    printName();
-    printJob();
+
+    if(inputFullName.value === ''){
+        cardName.innerHTML = 'Nombre Apellidos';
+    } else {
+        printName();
+    }
+
+    if(inputJob.value === ''){
+        cardJob.innerHTML = 'Front-end developer';
+    } else { 
+        printJob();
+    }
+    
+    
     fillTelf();
     fillEmail();
     fillLinkedin();
