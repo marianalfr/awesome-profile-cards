@@ -98,6 +98,15 @@ function retrieveData(){
             palette3.checked = false;
             palette2.checked = false;
             palette1.checked = true;
+
+            const radioColorGet = storedData.palette;
+      colorOne.checked = radioColorGet === 1;
+      //palette1.checked = storedData.palette === palette1.value;
+      colorTwo.checked = radioColorGet === 2;
+      //palette2.checked = storedData.palette === palette2.value;
+      colorThree.checked = radioColorGet === 3;
+      //palette3.checked = storedData.palette === palette3.value;
+      selectColor(radioColorGet);
         }
     }
 
