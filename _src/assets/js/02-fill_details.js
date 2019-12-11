@@ -9,6 +9,19 @@ let inputJob = document.querySelector('#job');
 const cardName = document.querySelector('#cardName');
 const cardJob = document.querySelector('#cardJob');
 
+const printName = () => {
+    cardName.innerHTML = inputFullName.value;
+};
+
+const printJob = () => {
+    cardJob.innerHTML = inputJob.value;
+};
+inputFullName.addEventListener('keyup', printName);
+inputJob.addEventListener('keyup', printJob);
+
+
+/***********************************************************************************************
+
 function printName(){
     cardName.innerHTML = inputFullName.value;
 };
@@ -16,6 +29,4 @@ function printName(){
 function printJob(){
     cardJob.innerHTML = inputJob.value;
 };
-
-inputFullName.addEventListener('keyup', printName);
-inputJob.addEventListener('keyup', printJob);
+*/
