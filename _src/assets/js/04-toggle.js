@@ -12,7 +12,7 @@ const arrowFill = document.querySelector('#arrow-fill');
 const arrowShare = document.querySelector('#arrow-share');
 
 
-function toggleDesign(){
+const toggleDesign = () => {
   formBottomDesign.classList.toggle('form-bottom-collapse');
   formBottomFill.classList.remove('form-bottom-collapse');
   formBottomShare.classList.remove('form-bottom-collapse');
@@ -20,9 +20,9 @@ function toggleDesign(){
   arrowDesign.classList.toggle('form-arrow-collapse');
   arrowFill.classList.remove('form-arrow-collapse');
   arrowShare.classList.remove('form-arrow-collapse');
-}
+};
 
-function toggleFill() {
+const toggleFill = () => {
   formBottomFill.classList.toggle('form-bottom-collapse');
   formBottomDesign.classList.remove('form-bottom-collapse');
   formBottomShare.classList.remove('form-bottom-collapse');
@@ -30,8 +30,8 @@ function toggleFill() {
   arrowFill.classList.toggle('form-arrow-collapse');
   arrowDesign.classList.remove('form-arrow-collapse');
   arrowShare.classList.remove('form-arrow-collapse');
-}
-function toggleShare() {
+};
+const toggleShare = () => {
   formBottomShare.classList.toggle('form-bottom-collapse');
   formBottomDesign.classList.remove('form-bottom-collapse');
   formBottomFill.classList.remove('form-bottom-collapse');
@@ -39,7 +39,7 @@ function toggleShare() {
   arrowShare.classList.toggle('form-arrow-collapse');
   arrowFill.classList.remove('form-arrow-collapse');
   arrowDesign.classList.remove('form-arrow-collapse');
-}
+};
 formTopDesign.addEventListener('click', toggleDesign);
 formTopFill.addEventListener('click', toggleFill);
 formTopShare.addEventListener('click', toggleShare);
