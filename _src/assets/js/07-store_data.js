@@ -11,7 +11,7 @@ let palette3Value = palette3.value;
 let fullNameValue = inputFullName.value;
 let jobValue = inputJob.value;
 let imageSource = inputImage.scr;
-let telfValue = inputPhone.value;
+let phoneValue = inputPhone.value;
 let emailValue = inputEmail.value;
 let linkedinValue = inputLinkedin.value;
 let githubValue = inputGithub.value;
@@ -54,7 +54,7 @@ function storeEmail(){
     storedData.email = inputEmail.value;
     storeData();
 }
-function storeTelf(){
+function storePhone(){
     storedData.phone = inputPhone.value;
     storeData();
 }
@@ -159,7 +159,7 @@ function init(){
     }
     
     
-    fillTelf();
+    fillPhone();
     fillEmail();
     fillLinkedin();
     fillGithub();
@@ -183,7 +183,7 @@ function reset(){
     profileImage.style.backgroundImage = `url(${imageUrl})`;
     profilePreview.style.backgroundImage = `url(${imageUrl})`;
 
-    fillTelf();
+    fillPhone();
     fillEmail();
     fillLinkedin();
     fillGithub();
@@ -202,7 +202,7 @@ palette3.addEventListener('click', storePalette);
 inputFullName.addEventListener('change', storeFullName);
 inputJob.addEventListener('change', storeJob);
 inputEmail.addEventListener('change', storeEmail);
-inputPhone.addEventListener('change', storeTelf);
+inputPhone.addEventListener('change', storePhone);
 inputLinkedin.addEventListener('change', storeLinkedin);
 inputGithub.addEventListener('change', storeGithub);
 btnReset.addEventListener('click', reset);
