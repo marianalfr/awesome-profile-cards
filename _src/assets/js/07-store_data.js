@@ -54,7 +54,7 @@ function storeEmail(){
     storedData.email = inputEmail.value;
     storeData();
 }
-function storeTelf(){
+function storePhone(){
     storedData.phone = inputPhone.value;
     storeData();
 }
@@ -198,7 +198,7 @@ palette3.addEventListener('click', storePalette);
 inputFullName.addEventListener('change', storeFullName);
 inputJob.addEventListener('change', storeJob);
 inputEmail.addEventListener('change', storeEmail);
-inputPhone.addEventListener('change', storeTelf);
+inputPhone.addEventListener('change', storePhone);
 inputLinkedin.addEventListener('change', storeLinkedin);
 inputGithub.addEventListener('change', storeGithub);
 btnReset.addEventListener('click', reset);
