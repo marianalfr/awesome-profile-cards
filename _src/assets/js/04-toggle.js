@@ -1,7 +1,4 @@
-'use strict';
-
-/////////////////////////////////////////////////////////
-//  toggle 
+'use strict'; 
 
 const formTopDesign = document.querySelector('#form-top-design');
 const formBottomDesign = document.querySelector('#form-bottom-design');
@@ -16,32 +13,32 @@ const arrowShare = document.querySelector('#arrow-share');
 
 
 function toggleDesign(){
-    formBottomDesign.classList.toggle('form-bottom-collapse');
-    formBottomFill.classList.remove('form-bottom-collapse');
-    formBottomShare.classList.remove('form-bottom-collapse');
+  formBottomDesign.classList.toggle('form-bottom-collapse');
+  formBottomFill.classList.remove('form-bottom-collapse');
+  formBottomShare.classList.remove('form-bottom-collapse');
 
-    arrowDesign.classList.toggle('form-arrow-collapse');
-    arrowFill.classList.remove('form-arrow-collapse');
-    arrowShare.classList.remove('form-arrow-collapse');
+  arrowDesign.classList.toggle('form-arrow-collapse');
+  arrowFill.classList.remove('form-arrow-collapse');
+  arrowShare.classList.remove('form-arrow-collapse');
 }
 
 function toggleFill() {
-    formBottomFill.classList.toggle('form-bottom-collapse');
-    formBottomDesign.classList.remove('form-bottom-collapse');
-    formBottomShare.classList.remove('form-bottom-collapse');
+  formBottomFill.classList.toggle('form-bottom-collapse');
+  formBottomDesign.classList.remove('form-bottom-collapse');
+  formBottomShare.classList.remove('form-bottom-collapse');
 
-    arrowFill.classList.toggle('form-arrow-collapse');
-    arrowDesign.classList.remove('form-arrow-collapse');
-    arrowShare.classList.remove('form-arrow-collapse');
+  arrowFill.classList.toggle('form-arrow-collapse');
+  arrowDesign.classList.remove('form-arrow-collapse');
+  arrowShare.classList.remove('form-arrow-collapse');
 }
 function toggleShare() {
-    formBottomShare.classList.toggle('form-bottom-collapse');
-    formBottomDesign.classList.remove('form-bottom-collapse');
-    formBottomFill.classList.remove('form-bottom-collapse');
+  formBottomShare.classList.toggle('form-bottom-collapse');
+  formBottomDesign.classList.remove('form-bottom-collapse');
+  formBottomFill.classList.remove('form-bottom-collapse');
 
-    arrowShare.classList.toggle('form-arrow-collapse');
-    arrowFill.classList.remove('form-arrow-collapse');
-    arrowDesign.classList.remove('form-arrow-collapse');
+  arrowShare.classList.toggle('form-arrow-collapse');
+  arrowFill.classList.remove('form-arrow-collapse');
+  arrowDesign.classList.remove('form-arrow-collapse');
 }
 formTopDesign.addEventListener('click', toggleDesign);
 formTopFill.addEventListener('click', toggleFill);

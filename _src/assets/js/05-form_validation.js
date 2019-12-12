@@ -18,19 +18,19 @@ function validateEmail() {
 
 // function validateTelf() {
 //     const telfError = document.querySelector('#error-telf');
-//     if (/^\d+$/.test(inputTelf.value)) {
-//         inputTelf.classList.remove('input-error');
+//     if (/^\d+$/.test(inputPhone.value)) {
+//         inputPhone.classList.remove('input-error');
 //         telfError.classList.add('hidden');
 //         return (true);
 //     } else {
-//         inputTelf.classList.add('input-error');
+//         inputPhone.classList.add('input-error');
 //         telfError.classList.remove('hidden');
 //         return (false);
 //     }
 // }
 
 inputEmail.addEventListener('change', validateEmail);
-// inputTelf.addEventListener('change', validateTelf);
+// inputPhone.addEventListener('change', validateTelf);
 
 const globalError = document.querySelector('#error-name-job');
 
