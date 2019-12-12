@@ -11,7 +11,7 @@ let palette3Value = palette3.value;
 let fullNameValue = inputFullName.value;
 let jobValue = inputJob.value;
 let imageSource = inputImage.scr;
-let telfValue = inputTelf.value;
+let telfValue = inputPhone.value;
 let emailValue = inputEmail.value;
 let linkedinValue = inputLinkedin.value;
 let githubValue = inputGithub.value;
@@ -55,7 +55,7 @@ function storeEmail(){
     storeData();
 }
 function storeTelf(){
-    storedData.phone = inputTelf.value;
+    storedData.phone = inputPhone.value;
     storeData();
 }
 function storeLinkedin(){
@@ -115,7 +115,7 @@ function retrieveData(){
         inputEmail.value = storedData.email;
     }
     if (storedData.phone !== ''){
-        inputTelf.value= storedData.phone;
+        inputPhone.value= storedData.phone;
     }
     if (storedData.linkedin !== ''){
         inputLinkedin.value = storedData.linkedin;
@@ -172,7 +172,7 @@ function reset(){
     inputFullName.value = '';
     inputJob.value = '';
     inputEmail.value = '';
-    inputTelf.value = '';
+    inputPhone.value = '';
     inputLinkedin.value = '';
     inputGithub.value = '';
     cardName.innerHTML = 'Nombre Apellidos';
@@ -202,7 +202,7 @@ palette3.addEventListener('click', storePalette);
 inputFullName.addEventListener('change', storeFullName);
 inputJob.addEventListener('change', storeJob);
 inputEmail.addEventListener('change', storeEmail);
-inputTelf.addEventListener('change', storeTelf);
+inputPhone.addEventListener('change', storeTelf);
 inputLinkedin.addEventListener('change', storeLinkedin);
 inputGithub.addEventListener('change', storeGithub);
 btnReset.addEventListener('click', reset);
