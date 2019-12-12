@@ -116,6 +116,7 @@
             background-color: $color-palette1c2;
             border-radius: 21px;
             margin-bottom: 30px;
+            @include hoverButton();
 
             @include media($tablet){
                 margin-bottom: 60px;

@@ -1,12 +1,11 @@
 'use strict';
 
-/////////////////////////////////////////////////////////
-// Show share link on click
+///////////////////////////////////// Show share link on click
 
 const cardShare = document.querySelector('#card-share');
 
 function shareLink(event) {
-    if (validateAll() === true) {
+    if (validateAll()) {
         cardShare.classList.remove('hidden');
         event.preventDefault();
     }
