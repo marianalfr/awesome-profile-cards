@@ -20,13 +20,3 @@ inputFullName.addEventListener('keyup', printName);
 inputJob.addEventListener('keyup', printJob);
 
 
-/***********************************************************************************************
-
-function printName(){
-    cardName.innerHTML = inputFullName.value;
-};
-
-function printJob(){
-    cardJob.innerHTML = inputJob.value;
-};
-*/
