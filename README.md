@@ -23,7 +23,7 @@ If you want to play around with our project, please visit [our Github repository
 
 ### Installing
 
-* On your terminal, make sure you are in your *contact-us-skylabers* folder and run the commands:
+* On your terminal, make sure you are in your *awesome-profile-cards* folder and run the commands:
 
 `$ npm install`
 
