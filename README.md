@@ -13,10 +13,10 @@ We were a team of three students and we used html, sass and javascript partials 
 
 ### Getting started
 
-If you want to play around with our project, please visit [our Github repository](https://github.com/Adalab/contact-us-skylabers) to clone or download it.
-* To clone it: copy this [link](https://github.com/Adalab/contact-us-skylabers.git) and go to your terminal. Once in the terminal, navigate to the directory where you want to install it and use the command:
+If you want to play around with our project, please visit [our Github repository](https://github.com/marianalfr/awesome-profile-cards) to clone or download it.
+* To clone it: copy this [link](https://github.com/marianalfr/awesome-profile-cards.git) and go to your terminal. Once in the terminal, navigate to the directory where you want to install it and use the command:
 
-```$ git clone https://github.com/Adalab/contact-us-skylabers.git```
+```$ git clone https://github.com/marianalfr/awesome-profile-cards.git```
 
 * To download it: you can download the zip version using the clone or download tab on the repository and unzip it in your local directory.
 
