@@ -1,57 +1,68 @@
 
-# Awesome Profile Cards
-Esta aplicación sirve para crear tarjetas de visita virtuales y compartirlas con tus contactos.
-A través del link  "Comenzar" de la landing page de la aplicación se accede a la página de personalización. En ella podremos elegir entre las diferentes opciones de diseño de la tarjeta y rellenar nuestros datos personales y de contacto.
-A medida que vamos construyendo nuestra tarjeta se irán mostrando los cambios en la zona de previsualización.
-Una vez terminada la tarjeta podemos generar un link para compartirla. Si no hemos rellenado alguno de los campos obligatorios o hay algún error no nos permitirá crear la tarjeta y nos pedirá que revisemos nuestros datos.
+# Awesome Profile Cards.
+![APC-home](APC-home.png)
+This is another of our projects at [Adalab](https://adalab.es/). It is a simple app that allows the user to create a digital business card with their full name, position and links to their contact details and social network profiles.
+We were a team of three students and we used html, sass and javascript partials compiled with node/gulp. One of the key features we had to achieve was to connect to a third party API to store the user's data and create the link to the card.
+[This](https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/-LxBP-zwF7FL9GtaPOuF) is an example of a business card created with our app. [Why not create yours as well?!](https://marianalfr.github.io/awesome-profile-cards/)
 
-## Guía de inicio rápido
-Necesitarás instalar [Node.js](https://nodejs.org/) y [Gulp](https://gulpjs.com) para trabajar con este Starter Kit, luego:
-1. Descarga o clona el repositorio
-2. Instala las dependencias locales con `npm install`
-3. Arranca el kit con `gulp`
+![APC-design](APC-design.png)
+![APC-fill](APC-fill.png)
+![APC-share](APC-share.png)
 
-## Espera, ¿esto se hace siempre?
-> ### Solo una vez al principio en cada ordenador que utilicemos:
-- Instalamos node
-- Instalamos el comando de gulp de forma global para poder usarlo desde cualquier carpeta usando `npm install --global gulp-cli`
+----
 
-> ### Cada vez que descarguemos o clonemos un repo:
-- `npm install` para instalar los paquetes necesarios para convertir Sass a CSS, minizarlo, etc.
+### Getting started
 
-> ### Cada vez que estemos trabajando con nuestro código:
-- Desde nuestra terminal, ejecutamos el comando `gulp` para que realice la tarea por defecto, que en el caso del `gulpfile.js` que tenemos en adalab-web-starter-kit estará pendiente de nuestros archivos Sass, html y JavaScript y los compilará, minificará y/o recargará el servidor cada vez que hagamos un cambio
+If you want to play around with our project, please visit [our Github repository](https://github.com/Adalab/contact-us-skylabers) to clone or download it.
+* To clone it: copy this [link](https://github.com/Adalab/contact-us-skylabers.git) and go to your terminal. Once in the terminal, navigate to the directory where you want to install it and use the command:
 
-## Tareas de gulp incluidas
-### Inicio de un web server para desarrollo
-```
-npm start
-```
-o lo que en este proyecto es lo mismo:
+```$ git clone https://github.com/Adalab/contact-us-skylabers.git```
 
-```
-gulp
-```
-Lanza un webserver con BrowserSync y varios watchers estarán pendientes de los archivos SCSS/JS/HTML, en la carpeta **public/**, para recargar el navegador cuando se necesite.
+* To download it: you can download the zip version using the clone or download tab on the repository and unzip it in your local directory.
 
-### Versión lista para subir a producción
 
-Para generar los ficheros para producción ejecuta:
+### Installing
 
-```
-npm run docs
-```
-o lo que en este proyecto es lo mismo:
-```
-gulp docs
-```
-En la carpeta **docs/** se generarán los CSS y JS minimizados y sin sourcemaps listos para subir al repo. A continuación súbelos al repo y activa en GitHub Pages la opción **master/docs/**, para que GitHub Pages sirva la página desde la carpeta **docs/**.
+* On your terminal, make sure you are in your *contact-us-skylabers* folder and run the commands:
 
----
+`$ npm install`
 
-Si quieres generar los ficheros listos para producción y además subirlos a GitHub directamente ejecuta el siguiente comando:
-```
-npm run push-docs
-```
-Este comando borra la carpeta **docs/**, la vuelve a generar, crea un commit con los nuevos ficheros y hace un `git push`, todo del tirón. ¿Cómo se te queda el cuerpo?. Si quieres saber cómo funciona échale un ojo al fichero `package.json`.
+`$ npm start` or `$ gulp`
 
+* Gulp will create the `public`folder and will run a local server where any changes will immediately show.
+* You can also create a `docs`folder by running `gulp docs`on your terminal.
+
+
+### Technologies
+
+* HTML 5.
+* CSS - SCSS.
+* Javascript.
+* Node/Gulp.
+
+
+### Team
+
+We are a team of three women from very different backgrounds that came together through Adalab Bootcamp in Madrid and this is our second project. We are [Ana Arribas](https://github.com/ana-arribas), [Mariana Lerma](https://github.com/marianalfr), and [Olga Hatalskaya](https://github.com/OlgaGatalskaya).
+
+### MIT License.
+
+Copyright (c) 2019 Las booleanas.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
